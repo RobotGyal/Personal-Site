@@ -17,6 +17,7 @@ Secondly, to actively practice and display a full-stack web development skillset
 * CSS
 * SQLLite
 * NASA APOD API
+* Bootstrap
 
 ## Code Example
 ```
