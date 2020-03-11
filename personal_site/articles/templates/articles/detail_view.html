@@ -4,16 +4,14 @@
 from .models import Article
 
 {%block title %}
-<h1>Articles</h1>
+<h1>Detail View</h1>
 
 {% endblock%}
 
+<h1>This is the Detal View Page</h1>
 
 {% block content %}
 <div style="color: aliceblue;">
-
-{% for article in articles %}
-
 
 <div class="card mb-3" style="max-width: 900px; background-color: rgba(253, 253, 253, 0);">
     <div class="row no-gutters">
@@ -22,15 +20,13 @@ from .models import Article
       </div>
       <div class="col-md-8">
         <div class="card-body">
-          <h2 class="card-title"><strong><a href="articles/{{articles.id}}">{{article.title}}</a></strong></h2>
+          <h2 class="card-title"><strong><a href="/articles/{{ article.id }}/">{{article.title}}</a></strong></h2>
           <p class="card-text">{{article.content}}</p>
           <p class="card-text">By: {{article.author}}  on {{article.created_on | date:"F d, Y"}}</p>
         </div>
       </div>
     </div>
   </div>
-
-{% endfor %}
 </div>
 
 
