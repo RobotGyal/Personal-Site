@@ -33,4 +33,3 @@ Visit the Live Site! Test out Functionality, Peruse, and Enjoy!
 Please leave feedback, bugs, etc. to this project by leaving comments and issues!
 
 ## Credits
-
