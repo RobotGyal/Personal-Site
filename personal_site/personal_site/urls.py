@@ -15,9 +15,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from articles import views
+from articles import views as article_views
+from websites import views as website_views
+from models import views as model_views
+from robotics import views as robotics_views
 
 urlpatterns = [
-    path('', views.index),
+    path('', article_views.index),
     path('admin/', admin.site.urls),
+    path('articles/', article_views.articles),
+    path('websites/', website_views.index),
+    path('models/', model_views.index),
+    path('robotics/', robotics_views.index)
 ]
