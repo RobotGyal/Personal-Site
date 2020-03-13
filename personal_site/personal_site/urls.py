@@ -22,6 +22,8 @@ from articles import views as article_views
 from websites import views as website_views
 from code import views as code_views
 from robotics import views as robotics_views
+from footer import views as footer_views
+
 
 urlpatterns = [
     path('', article_views.index),
@@ -29,5 +31,7 @@ urlpatterns = [
     path('articles/', include('articles.urls')),
     path('websites/', include('websites.urls')),
     path('code/', code_views.index),
-    path('robotics/', robotics_views.index)
+    path('robotics/', robotics_views.index),
+    path('about/', footer_views.about),
+    path('contact/', footer_views.contact),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

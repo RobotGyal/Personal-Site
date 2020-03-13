@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'websites.apps.WebsitesConfig',
     'code.apps.CodeConfig',
     'robotics.apps.RoboticsConfig',
+    'footer.apps.FooterConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
