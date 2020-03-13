@@ -1,10 +1,9 @@
+/* From GeekforGeeks.com */
 
-<style>
+
 * {
   box-sizing: border-box;
 }
-
-
 
 /* The actual timeline (the vertical ruler) */
 .timeline {
@@ -130,4 +129,3 @@
   left: 0%;
   }
 }
-</style>
