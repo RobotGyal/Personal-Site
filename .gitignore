@@ -1,2 +1,6 @@
 .env
 env/
+*.pyc
+.gitignore
+.DS_Store
+CNAME
