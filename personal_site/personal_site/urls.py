@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from articles import views as article_views
 from websites import views as website_views
-from models import views as model_views
+from code import views as code_views
 from robotics import views as robotics_views
 
 urlpatterns = [
@@ -25,6 +25,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('articles/', include('articles.urls')),
     path('websites/', website_views.index),
-    path('models/', model_views.index),
+    path('code/', code_views.index),
     path('robotics/', robotics_views.index)
 ]
