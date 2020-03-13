@@ -1,11 +1,32 @@
 {%extends 'base.html'%}
+{% load static %}
+
+from .models import Website
 
 {%block title %}
 <h1>Websites</h1>
 {% endblock%}
 
-{%block content %}
 
-<img class="card-img" src="../../../static/personal_site/pics/space.jpg">
+{%block content %}
+<div class = 'container col-xs-1' align="center" style="color: aliceblue;">
+
+{% for website in websites %}
+
+
+
+<div class="card mb-3"style="max-width: 900px; background-color: rgba(253, 253, 253, 0);">
+    <img class="card-img-top img-fluid" src="../../../static/personal_site/pics/space.jpg" style="height: 250px; width: 600px;"Card image cap">
+    <div class="card-body">
+        <h2 class="card-title"><strong>{{website.title}}</strong></h2>
+        <a href="#">Live Link</a><br>
+        <a href="#">Repo Link</a><br><br>
+        <p class="card-text">{{website.summary}}</strong></p>
+        <p class="card-text">This project was built with: <br>{{website.built_with}}</strong></p>
+        <p class="card-text">By: {{website.author}}  on {{website.created_on | date:"F d, Y"}}</p>
+    </div>
+  </div>
+{% endfor %}
+
 
 {% endblock%}

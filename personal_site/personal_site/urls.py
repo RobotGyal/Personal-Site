@@ -27,7 +27,7 @@ urlpatterns = [
     path('', article_views.index),
     path('admin/', admin.site.urls),
     path('articles/', include('articles.urls')),
-    path('websites/', website_views.index),
+    path('websites/', include('websites.urls')),
     path('code/', code_views.index),
     path('robotics/', robotics_views.index)
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
