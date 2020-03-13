@@ -16,10 +16,11 @@ from .models import Website
 
 
 <div class="card mb-3"style="max-width: 900px; background-color: rgba(253, 253, 253, 0);">
+    <h2 class="card-title" style="font-size: 3em;"><strong>{{website.title}}</strong></h2>
+
     <img class="card-img-top img-fluid" src="../../../static/personal_site/{{website.img}}" style="height: 250px; width: 600px;">
 <!-- <img class="card-img-top img-fluid" src="../../../static/personal_site/pics/i-planetary.png" style="height: 250px; width: 600px;"Card image cap> -->
     <div class="card-body">  
-        <h2 class="card-title"><strong>{{website.title}}</strong></h2>
         <a href="#">Live Link</a><br>
         <a href="#">Repo Link</a><br><br>
         <p class="card-text">{{website.summary}}</strong></p>
@@ -27,6 +28,8 @@ from .models import Website
         <p class="card-text">By: {{website.author}}  on {{website.created_on | date:"F d, Y"}}</p>
     </div>
   </div>
+  <br><br><br>
+
 {% endfor %}
 
 
