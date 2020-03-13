@@ -3,7 +3,7 @@ from django.conf import settings
 
 
 # Create your models here.
-class Webiste(models.Model):
+class Website(models.Model):
     title = models.CharField(max_length=255)
     img = models.ImageField(upload_to='pics/') 
     live_url = models.URLField(max_length=200)
