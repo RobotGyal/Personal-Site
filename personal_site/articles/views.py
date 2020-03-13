@@ -35,8 +35,4 @@ class ArticleDetailView(DetailView):
     """ Renders a specific page based on it's slug."""
     model = Article
 
-    def get(self, request, slug):
-        """ Returns a specific page by slug. """
-        article = get_object_or_404(Article, pk=kwargs['pk'])
-        context = {'article': article}        
-        return render(request, 'articles/detail_view.html', context)
+    
