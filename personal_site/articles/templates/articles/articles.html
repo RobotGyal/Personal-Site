@@ -22,7 +22,7 @@ from .models import Article
       </div>
       <div class="col-md-8">
         <div class="card-body">
-          <h2 class="card-title"><strong><a href="{{article.id}}/">{{article.title}}</a></strong></h2>
+          <h2 class="card-title"><strong><a href="{% url 'article-detail-page' article.id %}">{{article.title}}</a></strong></h2>
           <p class="card-text">{{article.content}}</p>
           <p class="card-text">By: {{article.author}}  on {{article.created_on | date:"F d, Y"}}</p>
         </div>

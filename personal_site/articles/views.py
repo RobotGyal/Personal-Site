@@ -34,5 +34,3 @@ class ArticleMainView(ListView):
 class ArticleDetailView(DetailView):
     """ Renders a specific page based on it's slug."""
     model = Article
-
-    

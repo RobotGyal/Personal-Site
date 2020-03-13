@@ -7,6 +7,6 @@ from articles.views import ArticleDetailView, ArticleMainView
 urlpatterns = [
     # path('', article_views.articles),
     path('', ArticleMainView.as_view(), name='article-main-page'),
-    path('<pk>/', ArticleDetailView.as_view(), name='article-detail-page'),
+    path('<int:pk>/', ArticleDetailView.as_view(), name='article-detail-page'),
     
 ]
