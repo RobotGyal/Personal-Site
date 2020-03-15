@@ -6,7 +6,7 @@ from django.views.generic.list import ListView
 
 
 def index(request):
-    return render(request, 'base.html')
+    return render(request, 'index.html')
 
 
 
