@@ -4,3 +4,15 @@
 <h1>Contact</h1>
 
 {% endblock%}
+
+{% block content %}
+<div class = "container" style="color:aliceblue">
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div class="form-actions">
+      <button type="submit">Send</button>
+    </div>
+</form></div>
+
+{% endblock %}
