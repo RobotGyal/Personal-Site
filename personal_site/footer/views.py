@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from .forms import ContactForm
-from django.core.mail import send_mail, BadHeaderError
+from django.core.mail import send_mail, BadHeaderError, EmailMessage
+from django.template.loader import get_template
+
 from django.http import HttpResponse, HttpResponseRedirect
 
 
@@ -9,20 +11,54 @@ def about(request):
 
 
 def contact(request):
-    if request.method == 'GET':
-        form = ContactForm()
-    else:
-        form = ContactForm(request.POST)
+    form_class = ContactForm
+
+    # new logic!
+    if request.method == 'POST':
+        form = form_class(data=request.POST)
+
         if form.is_valid():
-            subject = form.cleaned_data['subject']
-            from_email = form.cleaned_data['from_email']
-            message = form.cleaned_data['message']
-            try:
-                send_mail(subject, message, from_email, ['aleiaknight@gmail.com'])
-            except BadHeaderError:
-                return HttpResponse('Invalid header found.')
+            contact_name = request.POST.get(
+                'contact_name'
+            , '')
+            contact_email = request.POST.get(
+                'contact_email'
+            , '')
+            contact_subject = request.POST.get(
+                'contact_subject'
+            , '')
+            message = request.POST.get(
+                'message'
+            , '')
+            form_content = request.POST.get('content', '')
+
+            # Email the profile with the
+            # contact information
+            template = get_template('footer/contact_template.txt')
+            context = {
+                'contact_name': contact_name,
+                'contact_email': contact_email,
+                'contact_subject': contact_subject,
+                'message': message
+            }
+            content = template.render(context)
+
+            email = EmailMessage(
+                "New contact form submission",
+                content,
+                "Your website" +'',
+                ['aleiaknight@gmail.com'],
+                headers = {'Reply-To': contact_email }
+            )
+            email.send()
             return redirect('success')
-    return render(request, "footer/contact.html", {'form': form})
+
+    return render(request, 'footer/contact.html', {
+        'form': form_class,
+    })
 
 def success(request):
-    return HttpResponse('Success! Thank you for your message.')
+    content={
+        messaage:"Success! Thank you for your message."
+    }
+    return redirect()
