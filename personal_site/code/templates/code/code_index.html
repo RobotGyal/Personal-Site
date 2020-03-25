@@ -3,4 +3,36 @@
 {%block title %}
 <h1>Code</h1>
 
+{% for code in codes %}
+
+
+<div class="container" style="background-color:black; max-width: 900px; height: 100%; position: sticky;">
+    <br><br><br>
+    <h2 class="card-title" style="color: aliceblue;"><strong>{{article.title}}</strong></h2>
+    <div style="color: aliceblue;">
+    <div class="card mb-3" style="background-color:transparent">
+        <div class="row no-gutters">
+          <div class="col-md-6">
+            <div class="card-body">
+              <p >....................</p>
+              <p >......................................................</p>
+          </div>
+          </div> 
+
+          <div class="col-md-6">
+            <div class="card-body">
+              <p >....................</p>
+              <p >......................................................</p>
+          </div>
+          </div> 
+
+
+        </div>
+    </div>
+      </div>
+    </div>
+
+{% endfor %}
+
+
 {% endblock%}
