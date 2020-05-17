@@ -8,10 +8,7 @@ ENV PYTHONUNBUFFERED 1
 WORKDIR /code
 
 # Move requirements file into working directory in conatiner
-COPY requirements.txt /code
-
-# Setup working directory
-WORKDIR /code
+COPY ./personal_site/ /code
 
 # Install requirements in the working directory
 RUN pip3 install -r requirements.txt
