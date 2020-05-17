@@ -8,7 +8,7 @@ ENV PYTHONUNBUFFERED 1
 WORKDIR /code
 
 # Move requirements file into working directory in conatiner
-COPY ./requirements.txt /code
+COPY requirements.txt /code
 
 # Setup working directory
 WORKDIR /code
