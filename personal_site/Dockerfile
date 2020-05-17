@@ -7,21 +7,8 @@ ENV PYTHONUNBUFFERED 1
 # Setup working directory
 WORKDIR /code
 
-
+# Move requirements file into working directory in conatiner
 COPY requirements.txt /code
 
+# Install requirements in the working directory
 RUN pip3 install -r requirements.txt
-
-# COPY  . .
-
-# EXPOSE 8000
-
-
-# ENTRYPOINT [ "python3" ]
-
-# CMD [ "manage.py", "runserver" ]
-
-# RUN python3 docker_complete.py
-
-# docker build -t robotgyal/personal-site .
-# docker run -d -p 8000:8000 robotgyal/personal-site

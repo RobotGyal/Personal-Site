@@ -1,6 +1,60 @@
 {%extends 'base.html'%}
+{% load static %}
 
 {%block title %}
 <h1>About</h1>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<link rel="stylesheet" type="text/css" href="{% static 'personal_site/timeline.css' %}">
+<img src="../../../static/personal_site/pics/me.jpg" class="img-thumbnail rounded mx-auto d-block" style="height: 20%; width: 20%;">
+<br><br>
+<p style="color: aliceblue; text-align: center;">A heavy bookworm in youth, Aleia cultivated a love for reading and learning and grew to become passionate about math and science. Wanting to be an Inventor, she studied Robotics at University and is working towards another in Data Science. In her free time, she works to become an Entrepreneur and focuses on programmining, robotic design, and space technology as to build a medium to combine her, and others, passions for literature, tech, and community. 
+<br><br>
+  Aleia spends everyday thinking on her purpose and what it takes to achieve it. Putting in time to learn as much as possible about Science and Technology, Finance, Business, Writing, and Personal Relations so she can apply all she's learned to give back and show others how to find that same place within themselves.</p>
 {% endblock%}
+
+{% block content %}
+
+
+
+<div class="timeline">
+  <div class="container left">
+    <div class="content">
+      <h2>2017</h2>
+      <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>2016</h2>
+      <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h2>2015</h2>
+      <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>2012</h2>
+      <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h2>2011</h2>
+      <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>2007</h2>
+      <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}
