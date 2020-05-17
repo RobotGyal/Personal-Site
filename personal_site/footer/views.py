@@ -3,7 +3,7 @@ from django.shortcuts import render
 
 
 def about(request):
-    return render(request, 'footer/about.html.html')
+    return render(request, 'footer/about.html')
 
 
 def contact(request):
