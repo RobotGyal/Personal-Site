@@ -25,7 +25,7 @@ SECRET_KEY = 'a1$$z7ul+p&zpok3^6o_4fk!w@gd0o!kot^veb2^)t$u_k=ms6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['akinventions.herokuapp.com', '127.0.0.1', '0.0.0.0']
+ALLOWED_HOSTS = ['akinventions.herokuapp.com', '127.0.0.1', '0.0.0.0', 'www.aleiaknight.com']
 
 
 # Application definition
