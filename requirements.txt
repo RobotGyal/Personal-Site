@@ -103,7 +103,7 @@ tldr==0.5
 tornado==6.0.3
 traitlets==4.3.3
 typed-ast==1.4.1
-urllib3==1.25.7
+urllib3==1.25.8
 virtualenv==20.0.7
 wcwidth==0.1.8
 webencodings==0.5.1
